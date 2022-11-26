@@ -10,10 +10,10 @@ const app = Vue.createApp({
     },
     methods: {
         async getUser() {
-            const res = await fetch('https://randomuser.me/api')
-            const data = await res.json()
+            const res = await fetch('https://randomuser.me/api/?gender=female')
+            const { results } = await res.json()
             
-            let person = data.results[0]
+            let person = results[0]
             console.log(person);
 
             this.firstName = person.name.first
