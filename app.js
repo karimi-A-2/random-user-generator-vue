@@ -4,13 +4,17 @@ const app = Vue.createApp({
             firstName: 'Ali',
             lastName: 'Karimi',
             email: 'karimi.me.ali@gmail.com',
-            gender: 'female',  // male or female in style.css
+            gender: 'male',  // male or female in style.css
             picture: 'https://randomuser.me/api/portraits/men/10.jpg',
         }
     },
     methods: {
         getUser() {
-            console.log(this.firstName);
+            this.firstName = 'sam'
+            this.lastName = 'smith'
+            this.email = 'sam@gmail.com'
+            this.gender = 'female'
+            this.picture = 'https://randomuser.me/api/portraits/women/10.jpg'
         }
     }
 })
