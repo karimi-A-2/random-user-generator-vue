@@ -1,10 +1,10 @@
-const app = Vue.createApp({  // we have access to Vue from cdn
+const app = Vue.createApp({
     data() {
         return {
             firstName: 'Ali',
             lastName: 'Karimi',
             email: 'karimi.me.ali@gmail.com',
-            gender: 'male',
+            gender: 'female',  // male or female in style.css
             picture: 'https://randomuser.me/api/portraits/men/10.jpg',
         }
     }
