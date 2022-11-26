@@ -12,19 +12,15 @@ const app = Vue.createApp({
         async getUser() {
             const res = await fetch('https://randomuser.me/api')
             const data = await res.json()
+            
+            let person = data.results[0]
+            console.log(person);
 
-            console.log(data);
-            console.log(data.results);
-            console.log(JSON.stringify(data.results, null, 4))
-            console.log(data.results[0]);
-            console.log(data.results[0].name);
-            console.log(data.results[0].name.first);
-
-            this.firstName = 'sam'
-            this.lastName = 'smith'
-            this.email = 'sam@gmail.com'
-            this.gender = 'female'
-            this.picture = 'https://randomuser.me/api/portraits/women/10.jpg'
+            this.firstName = person.name.first
+            this.lastName = person.name.last
+            this.email = person.email
+            this.gender = person.gender
+            this.picture = person.picture.large
         }
     }
 })
